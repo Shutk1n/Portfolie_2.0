@@ -12,6 +12,8 @@ font-family: 'Poppins', sans-serif;
   --white: #fff;
   --purpule: #5c62ec;
 
+  --text-color: var(--black);
+
   --dark-bg: var(--black);
   --dark-border: var(--black-border);
   --header-text: var(--white);
@@ -21,6 +23,8 @@ font-family: 'Poppins', sans-serif;
 html,
 body {
   font-family: "DM Sans", sans-serif;
+  letter-spacing: -0.5px;
+  color: var(--text-color);
 }
 
 .container {
@@ -36,6 +40,7 @@ nav {
   border-bottom: 1px solid var(--dark-border);
   background-color: var(--dark-bg);
   color: var(--header-text);
+  letter-spacing: normal;
 }
 
 .nav-row {
@@ -68,6 +73,11 @@ nav {
 
 .nav-list__link {
   color: var(--header-text);
+  transition: opacity 0.2s ease-in;
+}
+
+.nav-list__link:hover {
+  opacity: 0.8;
 }
 
 .nav-list__link--active {
@@ -85,4 +95,79 @@ nav {
   height: 2px;
   width: 100%;
   background-color: var(--accent);
+}
+
+/* HEADER */
+
+.header {
+  padding: 40px 0;
+  min-height: 695px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(./../img/header-bg.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+
+  background-color: var(--dark-bg);
+  color: var(--header-text);
+  text-align: center;
+}
+
+.header__wrapper {
+  padding: 0 15px;
+  max-width: 660px;
+}
+
+.header__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.header__title strong {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.header__title span {
+  color: var(--accent);
+}
+
+.header__text {
+  font-size: 18px;
+  line-height: 1.333;
+  margin-bottom: 40px;
+}
+
+.header__text p + p {
+  margin-top: 1em;
+}
+
+.btn {
+  display: inline-block;
+  height: 48px;
+  padding: 12px 28px;
+
+  border-radius: 5px;
+  background-color: var(--accent);
+  color: var(--header-text);
+  letter-spacing: 0.15px;
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: opacity 0.3s ease-in;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  position: relative;
+  top: 2px;
 }
