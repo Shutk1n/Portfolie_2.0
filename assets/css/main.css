@@ -286,8 +286,12 @@ nav {
   height: 48px;
   border-radius: 5px;
   padding: 12px 20px;
-  border: 1px solid #000;
-  color: #000;
+  border: 1px solid var(--btn-bg);
+  color: var(--btn-color);
+}
+
+path {
+  fill: var(--btn-bg);
 }
 
 .btn-outline:active {
